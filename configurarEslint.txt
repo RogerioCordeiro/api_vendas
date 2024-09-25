@@ -1,0 +1,59 @@
+Lint
+Configurar o eslint.
+Instalar a extensão do ESlint no vscode.
+Seguir o passo a passo abaixo para configurar o eslint no projeto.
+No terminal do vscode,  rodar o comando:
+npm init @eslint/config@latest
+Selecionar as opções a seguir:
+How would you like to use ESLint? To check syntax and find problems
+What type of modules does your project use? JavaScript modules (import/export)
+Which framework does your project use? None of these
+Does your project use TypeScript? Yes
+Where does your code run? Node
+Would you like to install them now? Yes
+Which package manager do you want to use? npm
+Configurar o prettier
+Instalar a extensão do Prettier - Code Formatter no vscode
+instalar como dependência de desenvolvimento a lib do prettier no projeto.
+npm install -D prettier
+Criar um arquivo na raiz do projeto .prettierrc.json com os seguintes valores:
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "arrowFunctionParens": "always"}
+Configura o vscode para aplicar automaticamente as correções nesse projeto
+Criar uma pasta .vscode/ na raiz do projeto.
+Nessa pasta criar um arquivo settings.json esse arquivo deve conter o conteúdo abaixo:
+{  "eslint.validate": ["javascript"],
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.prettier": "explicit"
+  },
+  "editor.rulers": [80]
+}
+
+Criar na raiz do projeto um arquivo .editorconfig e colocar o conteúdo a seguir:
+
+# EditorConfig is awesome: https://EditorConfig.org
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+Configurando a extensão Prettier no Visual Studio Code
+Cod3r
+Neste artigo veremos como configurar a extensão Prettier no Visual Studio Code e como configurar nossas preferências de formatação para que nossos códigos sejam formatados de acordo com o nosso gosto.
+Blog Formação DEV
