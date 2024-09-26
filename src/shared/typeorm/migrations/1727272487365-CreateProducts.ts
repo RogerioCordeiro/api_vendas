@@ -18,6 +18,12 @@ export class CreateProducts1727272487365 implements MigrationInterface {
             type: 'varchar'
           },
           {
+            name: 'price',
+            type: 'decimal',
+            precision: 10,
+            scale: 2
+          },
+          {
             name: 'quantity',
             type: 'int'
           },

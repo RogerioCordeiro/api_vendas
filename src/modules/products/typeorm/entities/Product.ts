@@ -1,10 +1,4 @@
-import {
-  Column,
-  CreateDateColumn,
-  Entity,
-  PrimaryGeneratedColumn,
-  UpdateDateColumn
-} from 'typeorm'
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 
 @Entity('products')
 class Product {
@@ -19,7 +13,7 @@ class Product {
   @CreateDateColumn()
   created_at: Date
   @UpdateDateColumn()
-  upadated_at: Date
+  updated_at: Date
 }
 
 export default Product
