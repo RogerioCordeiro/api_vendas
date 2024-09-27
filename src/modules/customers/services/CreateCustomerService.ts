@@ -6,7 +6,6 @@ import Customer from '../typeorm/entities/Customer'
 interface IRequest {
   name: string
   email: string
-  password: string
 }
 
 class CreateCustomerService {
